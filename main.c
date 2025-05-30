@@ -51,9 +51,9 @@ Digit_state_t all_digit_state[10];  // Matrix representing the probability of ea
 
 void make_assumption(int digit_pos);
 
-void one_number_is_correct_but_wrong_place(int* hint);
-void two_numbers_are_correct_but_wrong_place(int* hint);
-void nothing_is_correct(int* hint);
+void one_number_is_correct_but_wrong_place(const int* hint);
+void two_numbers_are_correct_but_wrong_place(const int* hint);
+void nothing_is_correct(const int* hint);
 
 void update_state();
 
@@ -241,7 +241,7 @@ bool is_digit_correct(int digit)
     return false;
 }
 
-void one_number_is_correct_but_wrong_place(int* hint)
+void one_number_is_correct_but_wrong_place(const int* hint)
 {
     for(int i = 0; i < 3; i++)
     {
@@ -291,7 +291,7 @@ void one_number_is_correct_but_wrong_place(int* hint)
         add_correct_number(potential_correct_number);
 }
 
-void two_numbers_are_correct_but_wrong_place(int* hint)
+void two_numbers_are_correct_but_wrong_place(const int* hint)
 {
     int correct_count = 0;
     for(int i = 0; i < 3; i++)
@@ -353,7 +353,7 @@ void two_numbers_are_correct_but_wrong_place(int* hint)
     }
 }
 
-void nothing_is_correct(int* hint)
+void nothing_is_correct(const int* hint)
 {
     for(int i = 0; i < 3; i++)
     {
