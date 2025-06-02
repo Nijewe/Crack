@@ -12,6 +12,11 @@ Initially, all digits are considered equally likely to appear in any position. F
 
 As you can see, the initial assumption is absurd (every digit could be in every position), and the program will refine these probabilities based on the provided hints.
 
+however I chose to only initialize digits that actually appear in the provided hints.
+this helps immediately eliminate digits not present in any hint, reducing the
+search space. While this approach may not be optimal for all puzzles (some may
+expect unseen digits to still be considered), it works well for this specific logic.
+
 # Processing Hints
 
 Hints are given in the format:
