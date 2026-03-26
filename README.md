@@ -55,3 +55,6 @@ This program is not designed to support general puzzle formats. It is tightly co
 It uses this strict assumption to eliminate possibilities and converge on a solution quickly. It does not support such clues for general purpose clue
 
 If you'd like to extend or adapt this logic, contributions or suggestions are welcome!
+
+# Example of a puzzle
+![puzzle](/crack.jpg)
